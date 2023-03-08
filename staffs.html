@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/proxima/font.css">
+  <link href="./style/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./line-awesome/css/line-awesome.css">
+
+  <style>
+    .hy-drawer-content {
+      color: #fff;
+      max-width: 300px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    aside a {
+      color: #111;
+    }
+  </style>
+  <script src="./js/jquery.min.js" charset="utf-8"></script>
+  <script src="./js/main.js"></script>
+
+  <script>
+    $(function() {
+      if(window.localStorage["firstname"] != undefined && window.localStorage["lastname"] != undefined) {
+            $("#firstname").val(window.localStorage["firstname"]);
+            $("#lastname").val(window.localStorage["lastname"]);
+            $("#anmoluser").append(window.localStorage["lastname"]);
+
+           }
+
+      $(document).on('scroll', function() {
+
+        if ($(window).scrollTop() > 100) {
+          $('.scroll-top-wrapper').addClass('show');
+        } else {
+          $('.scroll-top-wrapper').removeClass('show');
+        }
+      });
+
+      $('.scroll-top-wrapper').on('click', scrollToTop);
+    });
+
+    function scrollToTop() {
+      verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+      element = $('body');
+      offset = element.offset();
+      offsetTop = offset.top;
+      $('html, body').animate({
+        scrollTop: offsetTop
+      }, 500, 'linear');
+    }
+  </script>
+  <title>JNV SIWAN MOBILE APP</title>
+</head>
+
+<body onLoad="onLoad()">
+
+  <div class="text-head">
+    <a style="padding-left:4px;float: left;" id="menuEl" href="#drawerEl">
+      <span class="la la-2x la-bars"></span></a>
+    <span>Jawahar Navodaya</span>
+    <span style="padding-right:4px; float:right;" class="la la-2x la-bell"></span>
+  </div>
+  <div class="text-head">
+    <span style="text-align:center">Vidyalaya</span>
+  </div>
+  <div class="text-s">
+    <img src="./img/logo.png" alt="JNV-SIWAN-LOGO">
+  </div>
+  <br>
+  <aside id="drawerEl" data-touch-events="true" data-mouse-events="true" data-prevent-default="true">
+
+    <div class="aside-head">
+      <div class="circle">
+        <img src="./img/user.png" alt="">
+        <span id="anmoluser">Hello! </span>
+      </div>
+    </div>
+
+
+    <a href="indexs.html">
+      <li><span class="la la-lg la-home">&nbsp;&nbsp;&nbsp;</span> Home</li>
+    </a>
+    <a href="admission.html">
+      <li><span class="la la-lg la-plus-circle">&nbsp;&nbsp;&nbsp;</span>Admission</li>
+    </a>
+    <a href="facility.html">
+      <li><span class="la la-lg la-futbol-o">&nbsp;&nbsp;&nbsp;</span>Facilities</li>
+    </a>
+    <a href="staffs.html">
+      <li><span class="la la-lg la-users">&nbsp;&nbsp;&nbsp;</span>Staffs</li>
+    </a>
+    <a href="contact.html">
+      <li><span class="la la-lg la-link">&nbsp;&nbsp;&nbsp;</span>Contact</li>
+    </a>
+    <a href="about.html">
+      <li><span class="la la-lg la-info">&nbsp;&nbsp;&nbsp;</span>About</li>
+    </a>
+    <a id="openBrowser">
+      <li><span class="la la-lg la-user">&nbsp;&nbsp;&nbsp;</span>Student Login</li>
+    </a>
+
+  </aside>
+
+  <script>
+    var ua = navigator.userAgent.toLowerCase();
+    var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+    var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+    $('#drawerEl').drawer({
+        range: isMobileSafari ? [35, 150] : [0, 150],
+        threshold: isSafari ? 0 : 10,
+      })
+      .on('transitioned.hy.drawer', function(e) {
+        console.log('hy-drawer transitioned to', e.detail);
+      });
+
+    $('#menuEl').click(function(e) {
+      e.preventDefault();
+      $('#drawerEl').drawer('toggle');
+    });
+  </script>
+ <div class="text-xsb proxima">
+ <font face="Times"color="red"><b>Teaching Staffs</b></font></div>
+<br>
+ <div style="overflow-x:auto;padding:1px;">
+<table class="proxima">
+<tr class="table-head">
+<th>SI no.</th>
+<th>Name of Employee</th>
+<th>Disignation</th>
+<th>Phone</th>
+<th>Email</th>
+</tr>
+<tr>
+<td>1.</td>
+<td>DR. SB MISHRA</td>
+<td>Principal</td>
+<td><a href="tel:9472104180">9472104180</a></td>
+<td>Drsbmishra@gmail.com</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Mr. Ashok Kumar</td>
+<td>PGT Biology</td>
+<td><a href="tel:9430458107"></a> 9430458107	</td>
+<td>Ashokkumar.pgt@gmail.com</td>
+
+</tr>
+<tr>
+<td>3.</td>
+<td>     Mr. Premchand Saini</td>
+<td>PGT Chemistry</td>
+<td>9887432303</td>
+<td>	pcssaini@gmail.com</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Mr.MK Jha</td>
+<td>PGT Physics</td>
+<td>8294620924	</td>
+<td>Manishkumarjha52@gmail.com</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Smt. Prabha Rani</td>
+<td>TGT Science</td>
+<td>9060877471</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>Mr. PK Mishra</td>
+<td>PGT HINDI</td>
+<td>9939858175</td>
+<td>	Pranjalmishra02@yahoo.com</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>Mr. P.R Rajul</td>
+<td>TGT Hindi</td>
+<td>8252625136</td>
+<td>	Rajul.muir@gmail.com</td>
+</tr>
+<tr>
+<td>8.</td>
+<td>Mr. Rajesh Kumar</td>
+<td>PGT English</td>
+<td>9431643943</td>
+<td>	rkjnvs@gmail.com</td>
+</tr>
+<tr>
+<td>9.</td>
+<td>Smt. Richa Mahato</td>
+<td>TGT English</td>
+<td>8873541644</td>
+<td>Richamahto17@gmail.com</td>
+</tr>
+<tr>
+<td>10.</td>
+<td>Mr. A K Sharma</td>
+<td>PGT MATHS</td>
+<td>8809875800</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>11.</td>
+<td>Mr. Ashutosh</td>
+<td>TGT Maths</td>
+<td>9835870795</td>
+<td>ashutoshjnvs@gmail.com</td>
+</tr>
+<tr>
+<td>12.</td>
+<td>Mr. S K Singh</td>
+<td>PGT Geography</td>
+<td>9835664593</td>
+<td>sksjnv@gmail.com</td>
+</tr>
+<tr>
+<td>13.</td>
+<td>Smt. Chetna Singh</td>
+<td>TGT Sst </td>
+<td>9319291000</td>
+<td>rchetnasingh@gmail.com</td>
+</tr>
+<tr>
+<td>14.</td>
+<td>Dhananjay Kumar</td>
+<td>TGT Bangla</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>15.</td>
+<td>Mr. A Kumae</td>
+<td>PET (M)</td>
+<td>9199054640</td>
+<td></td>
+</tr>
+<tr>
+<td>16.</td>
+<td>Smt. Seema Kumari</td>
+<td>PET (F)</td>
+<td>9470854529</td>
+<td>Skumargour8038@gmail.com</td>
+</tr>
+<tr>
+<td>17.</td>
+<td>Mr. Rajiv Ranjan</td>
+<td>Music Teacher</td>
+<td>9431404124</td>
+<td>	Ranjanrajiv69@gmail.com</td>
+</tr>
+<tr>
+<td>18.</td>
+<td>Mr. Manish Kumar</td>
+<td>Art Teacher</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19.</td>
+<td>Smt. Putul Kumari</td>
+<td>FCSA (Computer)</td>
+<td>9470701786</td>
+<td>putul2604@gmail.com</td>
+</tr>
+</table>
+
+<div class="text-xsb">
+ <div class="center"> &copy;All rights reserved|
+ <a href="index.html"class="nobut">JNV SIWAN</a>
+
+ </div>
+</div>
+  <script >
+  function myNavi(x) {
+  x.classList.toggle("change");
+  }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/proxima/font.css">
+  <link href="./style/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./line-awesome/css/line-awesome.css">
+
+  <style>
+    .hy-drawer-content {
+      color: #fff;
+      max-width: 300px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    aside a {
+      color: #111;
+    }
+  </style>
+  <script src="./js/jquery.min.js" charset="utf-8"></script>
+  <script src="./js/main.js"></script>
+
+  <script>
+    $(function() {
+
+      $(document).on('scroll', function() {
+
+        if ($(window).scrollTop() > 100) {
+          $('.scroll-top-wrapper').addClass('show');
+        } else {
+          $('.scroll-top-wrapper').removeClass('show');
+        }
+      });
+
+      $('.scroll-top-wrapper').on('click', scrollToTop);
+    });
+
+    function scrollToTop() {
+      verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+      element = $('body');
+      offset = element.offset();
+      offsetTop = offset.top;
+      $('html, body').animate({
+        scrollTop: offsetTop
+      }, 500, 'linear');
+    }
+  </script>
+  <title>JNV SIWAN MOBILE APP</title>
+</head>
+
+<body onLoad="onLoad()">
+
+  <div class="text-head">
+    <a style="padding-left:4px;float: left;" id="menuEl" href="#drawerEl">
+      <span class="la la-2x la-bars"></span></a>
+    <span>Jawahar Navodaya</span>
+    <span style="padding-right:4px; float:right;" class="la la-2x la-bell"></span>
+  </div>
+  <div class="text-head">
+    <span style="text-align:center">Vidyalaya</span>
+  </div>
+  <div class="text-s">
+    <img src="./img/logo.png" alt="JNV-SIWAN-LOGO">
+  </div>
+  <br>
+  <aside id="drawerEl" data-touch-events="true" data-mouse-events="true" data-prevent-default="true">
+
+    <div class="aside-head">
+      <div class="circle">
+        <img src="./img/user.png" alt="">
+        <span>Welcome!</span>
+      </div>
+    </div>
+
+
+    <a href="indexs.html">
+      <li><span class="la la-lg la-home">&nbsp;&nbsp;&nbsp;</span> Home</li>
+    </a>
+    <a href="admission.html">
+      <li><span class="la la-lg la-plus-circle">&nbsp;&nbsp;&nbsp;</span>Admission</li>
+    </a>
+    <a href="facility.html">
+      <li><span class="la la-lg la-futbol-o">&nbsp;&nbsp;&nbsp;</span>Facilities</li>
+    </a>
+    <a href="staffs.html">
+      <li><span class="la la-lg la-users">&nbsp;&nbsp;&nbsp;</span>Staffs</li>
+    </a>
+    <a href="contact.html">
+      <li><span class="la la-lg la-link">&nbsp;&nbsp;&nbsp;</span>Contact</li>
+    </a>
+    <a href="about.html">
+      <li><span class="la la-lg la-info">&nbsp;&nbsp;&nbsp;</span>About</li>
+    </a>
+    <a href="stulogin.html">
+      <li><span class="la la-lg la-user">&nbsp;&nbsp;&nbsp;</span>Student Login</li>
+    </a>
+
+  </aside>
+
+  <script>
+    var ua = navigator.userAgent.toLowerCase();
+    var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+    var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+    $('#drawerEl').drawer({
+        range: isMobileSafari ? [35, 150] : [0, 150],
+        threshold: isSafari ? 0 : 10,
+      })
+      .on('transitioned.hy.drawer', function(e) {
+        console.log('hy-drawer transitioned to', e.detail);
+      });
+
+    $('#menuEl').click(function(e) {
+      e.preventDefault();
+      $('#drawerEl').drawer('toggle');
+    });
+  </script>
+<br>
+  <div class="container proxima">
+    <div class="text-xsb">
+      <B>FACILITIES</B>
+    </div><br>
+    <ul>
+
+<div class="icons" >
+<i class="la la-building-o la-4x c1" ></i>
+<br>
+ADMINISTRATIVE & ACADEMIC BLOCK
+<br><br>
+<i class="la la-book la-4x c2" ></i>
+<br>
+
+LIBRARY
+<br><br>
+<i class="la la-lightbulb-o la-4x c3" ></i>
+<br>
+
+PHYSICS LABORATORY
+<br><br>
+<i class="la la-fire-extinguisher la-4x c4" ></i>
+<br>
+
+CHEMISTRY LABORATORY
+<BR><BR>
+<i class="la la-leaf la-4x c5" ></i>
+<br>
+
+BIOLOGY LABORATORY
+<BR><BR>
+
+<img class="sna" src="./img/math.png"><br><br>
+<br>MATHEMATICS LABORATORY
+
+<BR><BR>
+
+<i class="la la-desktop la-4x" ></i>
+<br>
+COMPUTER LABORATORY
+<BR><BR>
+<i class="la la-stethoscope la-4x c8" ></i>
+<br>
+
+M.I. ROOM <br><br>
+
+<img class="sams" src="./img/samsung.png"><br><br>
+SMART CLASS
+<br><br>
+<i class="la la-music la-4x c9" ></i>
+<br>
+
+MUSIC ROOM
+<BR><BR>
+<i class="la la-paint-brush la-4x c10" ></i>
+<br>
+
+ ART  ROOM
+<br><br>
+<i class="la la-cutlery la-4x c11" ></i>
+<br>
+
+STUDENT MESS
+<br><br>
+<i class="la la-futbol-o la-4x c12" ></i>
+<br>
+
+PLAY GROUND
+<br><br>
+
+<i class="la la-building-o la-4x c13" ></i>
+<br>
+
+ACCOMMODATION
+<br><br>
+<img class="sna" src="./img/snacks.png"><br>
+CANTEEN
+<br><br>
+
+  </div>
+	</div>
+  <br><br>
+  <div class="text-xsb proxima">
+   <div class="center"> &copy;All rights reserved|
+   <a href="index.html"class="nobut">JNV SIWAN</a>
+
+   </div>
+  </div>
+  <br>
+    <script >
+    function myNavi(x) {
+    x.classList.toggle("change");
+    }
+    </script>
+  </body>
+  </html>

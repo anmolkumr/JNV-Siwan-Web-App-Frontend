@@ -1,0 +1,67 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.app.jnv" version="1.0.0">
+  <name>JNV SIWAN APP</name>
+  <description>Jawahar Navodaya Vidyalaya Siwan Official Android App</description>
+  <author href="" email="anmol@programmer.net">Anmol Kumar</author>
+  <content src="indexs.html"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="SplashScreen" value="splash"/>
+  <preference name="SplashScreenDelay" value="4000" />
+  <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="FadeSplashScreenDuration" value="400"/>
+  <preference name="android-minSdkVersion" value="15" />
+  <preference name="StatusBarBackgroundColor" value="#26438c" />
+  <preference name="android-build-tool" value="gradle" />
+  <gap:plugin name="pushbots-cordova-plugin" spec="1.6.x" source="npm" />
+  <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1"/>
+  <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1"/>
+  <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0"/>
+  <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2"/>
+  <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1"/>
+  <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1"/>
+  <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0"/>
+  <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2"/>
+  <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0"/>
+  <plugin name="cordova-plugin-file" source="npm" spec="~4.1.1"/>
+  <plugin name="cordova-plugin-file-transfer" source="npm" spec="~1.5.0"/>
+  <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.1.0"/>
+  <plugin name="cordova-plugin-globalization" source="npm" spec="~1.0.3"/>
+  <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0"/>
+  <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0"/>
+  <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0"/>
+  <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1"/>
+  <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2"/>
+  <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
+  <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
+<plugin spec="https://github.com/tomloprod/cordova-plugin-headercolor.git" source="git" />
+  <plugin name="cordova-plugin-prevent-screenshot" source="npm"/>
+
+  <platform name="android">
+    <preference name="android-manifest/application/activity/@android:theme" value="@android:style/Theme.Light.NoTitleBar" />
+    <icon src="www/res/icon/android/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="www/res/icon/android/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="www/res/icon/android/drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="www/res/icon/android/drawable-xhdpi-icon.png" density="xhdpi"/>
+    <icon src="www/res/icon/android/drawable-xxhdpi-icon.png" density="xxhdpi"/>
+    <icon src="www/res/icon/android/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+    <splash platform="android" qualifier="port-ldpi" src="splash/android/drawable-port-ldpi-portrait.png"/>
+    <splash platform="android" qualifier="port-mdpi" src="splash/android/drawable-port-mdpi-portrait.png"/>
+    <splash platform="android" qualifier="port-hdpi" src="splash/android/drawable-port-hdpi-portrait.png"/>
+    <splash platform="android" qualifier="port-xhdpi" src="splash/android/drawable-port-xhdpi-portrait.png"/>
+    <splash src="splash.png"/>
+  </platform>
+
+  <access origin="*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+  <platform name="android">
+    <allow-intent href="market:*"/>
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
+  </platform>
+</widget>

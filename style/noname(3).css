@@ -1,0 +1,818 @@
+.striped {
+  bottom: 0;
+  background-image: linear-gradient(90deg, #8b1157 12.5%, #a0b115 12.5%, #a0b115 25%, #222b6f 25%, #222b6f 37.5%, #0495c8 37.5%, #0495c8 50%, #fbb614 50%, #fbb614 62.5%, #d54a0e 62.5%, #d54a0e 75%, #17aa94 75%, #17aa94 87.5%, #f831a3 87.5%);
+  background-size: 100% 10px;
+  background-repeat: repeat-x;
+  padding-top: 10px;
+}
+
+
+
+body {
+  background: #fff;
+  font-size: 15px;
+  margin: px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.cont {
+  background-color: #fff;
+  display: block;
+  cursor: pointer;
+  float: right;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 3px;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px 0;
+  color: black;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-38deg) translate(-4px, 6px);
+  transform: rotate(-38deg) translate(-4px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(38deg) translate(-4px, -8px);
+  transform: rotate(38deg) translate(-4px, -8px);
+}
+
+#menu,#tog {
+  padding: 15px;
+  text-align: left;
+  background-color: #ddd;
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  margin: auto;
+}
+
+#menu {
+  padding: 1px;
+  display: none;
+}
+
+a li {
+  list-style-type: none;
+  text-align: left;
+  Color: black;
+  background-color: #fff;
+  width: 100℅;
+  padding: 15px;
+  left: 0;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+}
+
+ul a {
+  width: 100℅;
+  text-align: left;
+  background-color: ;
+    color: whie;
+  text-decoration: none;
+}
+
+a li:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+}
+
+#tog a {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width:600px) {
+  .contact {
+    margin: auto;
+    width: 96%;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    background: white;
+  }
+
+  .h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .mob-menu {
+    display: block;
+  }
+
+  .divmargin {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .h2 {
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .contact strong {
+    text-align: }
+    .cont {
+      background-color: #111;
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+  }
+
+  .bar1,
+    .bar2,
+    .bar3 {
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    margin: 5px 0;
+    color: ;
+        transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-38deg) translate(-4px, 6px);
+    transform: rotate(-38deg) translate(-4px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(38deg) translate(-4px, -8px);
+    transform: rotate(38deg) translate(-4px, -8px);
+  }
+
+  #menu,
+    #tog {
+    padding: 15px;
+    text-align: left;
+    background-color: #111;
+    border: none;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .05);
+    width: 100%;
+    color: #fff;
+  }
+
+  #tog {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  #menu {
+    color: #fff;
+    background-color: #3ca7b4;
+    padding: 1px;
+    display: none;
+  }
+
+  a li {
+    list-style-type: none;
+    text-align: left;
+    Color: #fff;
+    background-color: #3ca7b4;
+    padding: 15px;
+    left: 0;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in;
+  }
+
+  ul a {
+    text-align: left;
+    background-color: ;
+        color: whie;
+    text-decoration: none;
+  }
+
+  a li:hover {
+    background-color: #399fac;
+    color: #fff;
+    border-bottom: 1px solid blue;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #tog a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .mymenu {
+    width: 100%;
+    margin: auto;
+  }
+
+  .clinic {
+    text-align: center;
+    font-size: 24px;
+    background: none;
+    color: Black;
+    padding-top: 6px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 15px;
+    font-family: 'Droid Serif', serif;
+  }
+
+  .clinic img {
+    width: 48px;
+    height: 70px;
+    padding-bottom: 5px;
+    display: inline;
+    float: left;
+  }
+
+  .image {
+    width: 75%;
+    height: auto;
+    margin: auto;
+  }
+
+  .image img {
+    display: block;
+    border-radius: 3px;
+    width: 75%;
+    height: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quicklink {
+    color: black;
+    padding: 3px;
+    font-size: 20px;
+  }
+
+  #quicklink a {
+    display: block;
+    padding: 6px;
+    margin-left: 6px;
+    margin-right: 15px;
+    margin-bottom: 4px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .follow {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .followitem {
+    text-align: center;
+  }
+
+  .followitem a {
+    border: 3px solid #fff;
+    padding: px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 50%;
+  }
+
+  .fb {
+    font-size: 18px;
+    color: #2c477e;
+    padding: 8px;
+  }
+
+  .gp {
+    font-size: 18px;
+    color: #b64836;
+    padding: 8px;
+  }
+
+  .tweet {
+    font-size: 18px;
+    color: #1dcaff;
+    padding: 8px;
+  }
+
+  .whatsapp {
+    font-size: 18px;
+    color: #4caf50;
+    padding: 8px;
+  }
+
+  .copyrights {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .copyrights a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    ;
+  }
+
+  #copyrights {
+    text-align: center;
+  }
+
+  #copyrights a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .choosingme i {
+    color: green;
+  }
+
+  .choosingme {
+    width: 96%;
+    margin: auto;
+  }
+
+  .footer-down {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #333;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .user-pan{
+   width: 95%;
+    margin: auto;
+  }
+}
+}
+
+@media screen and (min-width:600px) {
+  .contact {
+    margin: auto;
+    width: 60%;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    background: white;
+  }
+
+  .h2 {
+    font-size: 38px;
+    font-weight: 600;
+    text-align: centr;
+  }
+
+  .clinic {
+    font-size: 43px;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-right: 2px;
+    padding-bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .image {
+    width: 75%;
+    height: auto;
+    margin: auto;
+  }
+
+  .image img {
+    display: block;
+    border: 1px solid #f2f2f2;
+    width: 75%;
+    height: auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .clinic img {
+    width: 68px;
+    height: 78px;
+    padding-bottom: 15px;
+    padding-left: 6px;
+    display: inline;
+    float: left;
+    .chooseus {
+            margin: auto;
+    padding: 3px;
+    font-size: 28px;
+    border-left: 4px solid #4caf50;
+  }
+
+  .chooseus p {
+    border-bottom: 2px solid #04a6d;
+    padding-bottom: 2px;
+    text-align: center;
+  }
+}
+
+#chooseus {
+  font-size: 22px;
+}
+
+#chooseus section a {
+  text-align: center;
+}
+
+.choosingme {
+  margin: auto;
+  padding: 10px;
+  width: 95%;
+  height: auto;
+}
+
+.choosingme i {
+  color: green;
+}
+
+.follow {
+  text-align: center;
+  font-size: 25px;
+}
+
+.followitem {
+  text-align: center;
+}
+
+.fb {
+  font-size: 29px;
+  color: #2c477e;
+  padding: 5px;
+}
+
+.gp i {
+  font-size: 29px;
+  color: #b64836;
+  padding: 5px;
+}
+
+.tweet {
+  font-size: 29px;
+  color: #1dcaff;
+  padding: 5px;
+}
+
+.whatsapp {
+  font-size: 29px;
+  color: #4caf50;
+  padding: 5px;
+}
+
+.copyrights {
+  text-align: center;
+}
+
+.copyrights a {
+  text-decoration: none;
+}
+
+#copyrights {
+  text-align: center;
+}
+
+#copyrights a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+}
+
+.menu-desktop {
+  display: block;
+}
+
+.mob-menu {
+  display: none;
+}
+
+.menu-desktop table {
+  border-collapse: collapse;
+  background: #3ca7b4;
+}
+
+.menu-desktop td {
+  padding: 8px;
+  text-align: center;
+}
+
+.menu-desktop td i {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.menu-desktop td a {
+  padding: 0px;
+  text-decoration: none;
+  color: #fff;
+}
+  }
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #4CAF50;
+}
+
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #2196F3;
+}
+
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #00bcd4;
+}
+
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #ff9800;
+}
+
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+
+  .right {
+    display: none;
+  }
+}
+
+.contact strong {
+  text-align: }
+
+    .video{
+      display: block;
+  margin: 0 auto;
+}
+
+.interactions {
+  font-size: 25px;
+  font-weight: 400;
+  text-shadow: 1px 2px 5px;
+  color: teal;
+  margin: 5px;
+  border-left: px;
+  border-left-color: #4caf50;
+}
+
+.introdesc {
+  font-weight: 400;
+  margin: 5px;
+  color: black;
+}
+
+@media screen and (max-width:600px) {
+  .video {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    height: 240px;
+  }
+
+  .main-body {
+    margin: px;
+    font-size: 16px;
+  }
+
+  .loginfo div {
+    border: 2px solid #3ca7b4;
+    padding: 30px;
+    display: block;
+    text-align: center;
+    border-top-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .loginfo div:hover {
+    background: #3ca7b4;
+    border: 2px solid #3ca7b4;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+
+  .loginfo i {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .loginfo i:hover {
+    font-size: 40px;
+    color: #fff;
+    width: 100%;
+  }
+
+  .loginfo {
+    width: %;
+  }
+
+  .material-back {
+    padding: 6px;
+    background-clip: border-box;
+    margin: none;
+  }
+
+  .slider .indicators .indicator-item {
+    background-color: #666666;
+    border: 3px solid #ffffff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .slider .indicators .indicator-item.active {
+    background-color: #ffffff;
+  }
+
+  .slider {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .slider .indicators {
+    bottom: 60px;
+    z-index: 100;
+      /* text-align: left; */
+  }
+
+  .slides img {
+    width: 320px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width:600px) {
+
+  .main-body {
+    width: 90%;
+    margin: auto;
+    font-size: 17px;
+  }
+
+  .loginfo div {
+    border: 3px solid #3ca7b4;
+    float: left;
+    display: block;
+    padding: 10px;
+    width: 47%;
+    height: 140px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+    text-align: center;
+  }
+
+  .loginfo div:hover {
+    background: #3ca7b4;
+    border: 3px solid #3ca7b4;
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+
+  .loginfo {
+    margin: auto;
+    width: 95%;
+  }
+
+  .loginfo i {
+    width: 100%;
+  }
+
+  .loginfo i:hover {
+    font-size: 40px;
+    color: #fff;
+    width: 100%;
+  }
+
+  .quicklink {
+    color: black;
+    padding: 3px;
+    font-size: 24px;
+  }
+
+  #quicklink a {
+    display: block;
+    padding: 8px;
+    margin-left: 8px;
+    margin-right: 15px;
+    margin-bottom: 4px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .pc {
+    width: 45%;
+    border: 3px solid #111;
+    float: left;
+    display: block;
+    height: 660px;
+    margin: 10px;
+  }
+}
+
+.divmargin {
+  margin-right: 20px;
+}
+
+.div-center {
+}
+
+.div-right {
+  float: right;
+}

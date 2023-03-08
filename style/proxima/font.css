@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'proximanovalight';
+	src: url('./proximanovalight.eot');
+	src: local('proximanovalight'), url('./proximanovalight.woff') format('woff'), url('./proximanovalight.ttf') format('truetype');
+}
+
+.proxima{
+	font-family: 'proximanovalight';
+	font-size:15px;
+}

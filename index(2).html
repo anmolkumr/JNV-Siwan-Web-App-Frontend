@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./css/responsive-nav.css">
+    <script src="./js/responsive-nav.js"></script>
+    <style media="screen">
+    *{
+      margin: 0;
+      box-sizing: border-box;
+
+    }
+      #nav-toggle{
+        text-decoration: none;
+
+
+            }
+            #nav-toggle div{
+
+              text-decoration: none;
+              padding-top: 10px;
+              padding-bottom:10px;
+            background: #111;
+              color: white;
+              width:100%;
+              border-top-left-radius: 7px;
+              border-top-right-radius: 7px;
+                  }
+          #nav-toggle div span{
+
+
+          }
+        #nav{
+          text-decoration: none;
+
+          background: #dc4ef3;
+          color: white;
+          width: 100%;
+        }
+        #nav ul a{
+          text-decoration: none;
+        }
+        #nav ul a li{
+          color:#fff;
+          text-align:left;
+          text-decoration: none;
+          padding-left: 10px;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          border-bottom: 1px solid #fff;
+          transition: 0.4s;
+        }
+        #nav ul a li:hover{
+          color: #fff;
+          background: orange;
+          transition: 0.4s;
+          webkit-transition :0.2s
+        }
+        .anmolnav{
+          text-align: right;
+          padding-right: 10px;
+
+        }
+    </style>
+
+    <link rel="stylesheet"href="./line-awesome/css/line-awesome.css">
+    
+  </head>
+  <body>
+<br>
+    <div id="nav">
+      <ul>
+        <a href="indexs.html"><li>Home</li> </a>
+        <a href="admission.html"><li>Admission</li> </a>
+        <a href="facility.html"><li>Facilities</li> </a>
+        <a href="staffs.html"><li>Staffs</li> </a>
+        <a href="contact.html"><li>Contact</li> </a>
+        <a href="about.html"><li>About</li> </a>
+        <a id="openBrowser"><li>Student Login</li> </a>
+      </ul>
+    </div>
+
+    <script>
+      var navigation = responsiveNav("#nav", {
+        insert: "before"
+      });
+    </script>
+
+  </body>
+</html>

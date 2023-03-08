@@ -1,0 +1,260 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="./js/index.js"></script>
+      <link rel="stylesheet" href="./style/style.css">
+      <link rel="stylesheet" href="./style/normalize.css">
+      <link rel="stylesheet" href="./style/proxima/font.css">
+      <link href="./style/main.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="./line-awesome/css/line-awesome.css">
+      <title>JNV SIWAN MOBILE APP</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <style>
+      button
+        .hy-drawer-content { color:#fff;
+        max-width: 300px;
+          }
+    aside a { color: #111; }
+    #responsecontainer input{
+      outline: none;
+      padding: 9px;
+      margin: 5px;
+      width: 80%;
+      border: 1px solid #111;
+      border-radius: 50px;
+    }
+      #responsecontainer{
+        width:90%;
+        margin: 0 auto;
+      }
+      .percent{
+        background: #33cc33;
+        color:#fff;
+        padding: 10px;
+        border-radius: 4px;
+
+      }
+      .username{
+        text-transform: capitalize;
+      }
+      {
+        display:none;
+      }
+      .modal
+      {
+          position: fixed;
+
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background-color: #grey;
+          filter: alpha(opacity=100);
+          opacity: 1;
+          -moz-opacity: 0.7;
+      }
+      .centerd
+      {
+
+        position: relative;
+      margin: 0 auto;
+          padding: 10px;
+          width: 130px;
+          background-color: transparent;
+          border-radius: 10px;
+          filter: alpha(opacity=100);
+          opacity: 2;
+          -moz-opacity: 1;
+      }
+      .centerd img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+          height: 128px;
+          width: 128px;
+      }
+      #anmoluser{
+        text-transform: capitalize;
+        color: #fff;
+      }
+  </style>
+      <script src="./js/jquery.min.js" charset="utf-8"></script>
+      <script src="./js/main.js"></script>
+      <script type="text/javascript">
+
+      </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+              var form = $("#loginForm");
+              var user = $("#anmoluser");
+            	if(window.localStorage["firstname"] != undefined && window.localStorage["lastname"] != undefined) {
+            		$("#firstname", form).val(window.localStorage["firstname"]);
+            		$("#lastname", form).val(window.localStorage["lastname"]);
+            		$("#myuser", user).val(window.localStorage["lastname"]);
+            		
+              }
+
+
+              $("#sub").click(function(){
+                $.ajaxSetup({
+                    global: false,
+                    type: "GET",
+                    url: "http://anmol-jnv-project.c1.biz/logdata.php",
+                    beforeSend: function () {
+                        $(".modal").show();
+                    },
+                    complete: function () {
+                        $(".modal").hide();
+                    }
+                });
+                var firstname = $("#firstname").val();
+                var lastname = $("#lastname").val();
+                if($.trim(firstname).length >0 & $.trim(lastname).length >0) {
+                $.ajax({
+
+                    data:{username:firstname},
+                    cache:false,
+                    success:function(data) {
+                      window.localStorage["firstname"] = firstname;
+				              window.localStorage["lastname"] = lastname;
+                       $("#responsecontainer").html(data);
+                    }
+                })
+                }
+                else {
+                    alert('Input fields are empty');
+                }
+            })
+        })
+        </script>
+
+          <script>
+            $(function() {
+
+              $(document).on('scroll', function() {
+
+                if ($(window).scrollTop() > 100) {
+                  $('.scroll-top-wrapper').addClass('show');
+                } else {
+                  $('.scroll-top-wrapper').removeClass('show');
+                }
+              });
+
+              $('.scroll-top-wrapper').on('click', scrollToTop);
+            });
+
+            function scrollToTop() {
+              verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+              element = $('body');
+              offset = element.offset();
+              offsetTop = offset.top;
+              $('html, body').animate({
+                scrollTop: offsetTop
+              }, 500, 'linear');
+            }
+          </script>
+
+    </head>
+    <body onLoad="onLoad()">
+      <div id="loginPage">
+
+        <div class="text-head">
+          <a style="padding-left:4px;float: left;" id="menuEl" href="#drawerEl">
+            <span class="la la-2x la-bars"></span></a>
+          <span>Jawahar Navodaya</span>
+          <span style="padding-right:4px; float:right;" class="la la-2x la-bell"></span>
+        </div>
+        <div class="text-head">
+          <span style="text-align:center">Vidyalaya</span>
+        </div>
+        <div class="text-s">
+          <img src="./img/logo.png" alt="JNV-SIWAN-LOGO">
+        </div>
+        <br>
+        <aside id="drawerEl" data-touch-events="true" data-mouse-events="true" data-prevent-default="true">
+
+          <div class="aside-head">
+            <div class="circle">
+              <img src="./img/user.png" alt="">
+            <span id="anmoluser">Hello! <p id="myuser"></p></p>
+            </div>
+          </div>
+
+
+          <a href="indexs.html">
+            <li><span class="la la-lg la-home">&nbsp;&nbsp;&nbsp;</span> Home</li>
+          </a>
+          <a href="admission.html">
+            <li><span class="la la-lg la-plus-circle">&nbsp;&nbsp;&nbsp;</span>Admission</li>
+          </a>
+          <a href="facility.html">
+            <li><span class="la la-lg la-futbol-o">&nbsp;&nbsp;&nbsp;</span>Facilities</li>
+          </a>
+          <a href="staffs.html">
+            <li><span class="la la-lg la-users">&nbsp;&nbsp;&nbsp;</span>Staffs</li>
+          </a>
+          <a href="contact.html">
+            <li><span class="la la-lg la-link">&nbsp;&nbsp;&nbsp;</span>Contact</li>
+          </a>
+          <a href="about.html">
+            <li><span class="la la-lg la-info">&nbsp;&nbsp;&nbsp;</span>About</li>
+          </a>
+          <a href="stulogin.html">
+            <li><span class="la la-lg la-user">&nbsp;&nbsp;&nbsp;</span>Student Login</li>
+          </a>
+
+        </aside>
+
+        <script>
+          var ua = navigator.userAgent.toLowerCase();
+          var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+          var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+          $('#drawerEl').drawer({
+              range: isMobileSafari ? [35, 150] : [0, 150],
+              threshold: isSafari ? 0 : 10,
+            })
+            .on('transitioned.hy.drawer', function(e) {
+              console.log('hy-drawer transitioned to', e.detail);
+            });
+
+          $('#menuEl').click(function(e) {
+            e.preventDefault();
+            $('#drawerEl').drawer('toggle');
+          });
+        </script>
+
+      <div id="responsecontainer" align="center">
+          <h3 class="w3-center proximar">Login to see your Result!!!</h3><br>
+
+
+        <div class="w3-card" style="border-radius: 15px;">
+          <form id="loginForm">
+
+        <br><h3 class="proximar">Sign In </h3><br>
+        <input class="proximar" type="text" placeholder="Admission Number" id="firstname" name="firstname"><br><br>
+        <input class="proximar" type="email" placeholder="First Name(lower case)" id="lastname" name="lastname"><br><br>
+        <a id="sub" style="border-radius: 50px;" class="w3-btn w3-indigo w3-round-small"><span>Get Result</span></a><br><br>
+      </form>
+      </div>
+        </div>
+        <br><br>
+        <div class="text-xsb proxima">
+          <div class="center"> &copy;All rights reserved|
+            <a href="index.html" class="nobut">JNV SIWAN</a>
+
+          </div>
+        </div>
+      </div>
+        <div id="response">
+
+        </div>
+          <div class="modal" style="display: none">
+          <div class="centerd">
+            <img alt="" src="loader.gif" />
+          </div>
+
+    </body>
+</html>

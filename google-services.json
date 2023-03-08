@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "355622521099",
+    "firebase_url": "https://my-project-1508525298645.firebaseio.com",
+    "project_id": "my-project-1508525298645",
+    "storage_bucket": "my-project-1508525298645.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355622521099:android:7a055f788c312437",
+        "android_client_info": {
+          "package_name": "com.jnv.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355622521099-tdom7f0qa3mavbpr2eijn61ha1t1neo3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAaVH9VHv50UVrk5IpcEHIoNavah8fztM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

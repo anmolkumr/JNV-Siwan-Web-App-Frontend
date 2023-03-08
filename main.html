@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <title>jQuery Example | hy-drawer</title>
+    <link href="./style/main.css" rel="stylesheet" type="text/css">
+
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+      <script src="./js/main.js"></script>
+
+    <style>.hy-drawer-content { color:#fff;
+            max-width: 277px;
+
+          }
+    aside a { color: #111; }</style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <a id="menuEl" href="#drawerEl"><span class="sr-only">Menu</span></a>
+
+      <aside id="drawerEl" data-touch-events="true" data-mouse-events="true" data-prevent-default="true">
+        <ul>
+          <li><a href="../mixin/">Mixin Example</a></li>
+          <li><a href="../vanilla/">Vanilla JS Example</a></li>
+          <li><a href="../jquery/">jQuery Example</a></li>
+          <li><a href="../webcomponent/">WebComponent Example</a></li>
+          <li><a href="../mixin/">Mixin Example</a></li>
+          <li><a href="../vanilla/">Vanilla JS Example</a></li>
+          <li><a href="../jquery/">jQuery Example</a></li>
+          <li><a href="../webcomponent/">WebComponent Example</a></li>
+          <li><a href="../mixin/">Mixin Example</a></li>
+          <li><a href="../vanilla/">Vanilla JS Example</a></li>
+          <li><a href="../jquery/">jQuery Example</a></li>
+          <li><a href="../webcomponent/">WebComponent Example</a></li>
+          <li><a href="../mixin/">Mixin Example</a></li>
+          <li><a href="../vanilla/">Vanilla JS Example</a></li>
+          <li><a href="../jquery/">jQuery Example</a></li>
+          <li><a href="../webcomponent/">WebComponent Example</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+      var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+      $('#drawerEl').drawer({
+        range: isMobileSafari ? [35, 150] : [0, 150],
+        threshold: isSafari ? 0 : 10,
+      })
+      .on('transitioned.hy.drawer', function(e) {
+        console.log('hy-drawer transitioned to', e.detail);
+      });
+
+      $('#menuEl').click(function (e) {
+        e.preventDefault();
+        $('#drawerEl').drawer('toggle');
+      });
+    </script>
+  </body>
+</html>

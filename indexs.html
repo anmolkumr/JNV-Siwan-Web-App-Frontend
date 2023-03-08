@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/proxima/font.css">
+  <link href="./style/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./line-awesome/css/line-awesome.css">
+  <title>JNV SIWAN MOBILE APP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .hy-drawer-content { color:#fff;
+    max-width: 300px;
+      }
+aside a { color: #111; }</style>
+  <script src="./js/jquery.min.js" charset="utf-8"></script>
+  <script src="./js/main.js"></script>
+
+
+  <script>
+    $(function() {
+
+      $(document).on('scroll', function() {
+
+        if ($(window).scrollTop() > 100) {
+          $('.scroll-top-wrapper').addClass('show');
+        } else {
+          $('.scroll-top-wrapper').removeClass('show');
+        }
+      });
+
+      $('.scroll-top-wrapper').on('click', scrollToTop);
+    });
+
+    function scrollToTop() {
+      verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+      element = $('body');
+      offset = element.offset();
+      offsetTop = offset.top;
+      $('html, body').animate({
+        scrollTop: offsetTop
+      }, 500, 'linear');
+    }
+  </script>
+</head>
+
+<body onLoad="onLoad()">
+
+  <div class="text-head">
+    <a style="padding-left:4px;float: left;" id="menuEl" href="#drawerEl">
+      <span class="la la-2x la-bars"></span></a>
+    <span>Jawahar Navodaya</span>
+    <span style="padding-right:4px; float:right;" class="la la-2x la-bell"></span>
+  </div>
+  <div class="text-head">
+    <span style="text-align:center">Vidyalaya</span>
+  </div>
+  <div class="text-s">
+    <img src="./img/logo.png" alt="JNV-SIWAN-LOGO">
+  </div>
+  <br>
+  <aside id="drawerEl" data-touch-events="true" data-mouse-events="true" data-prevent-default="true">
+
+    <div class="aside-head">
+      <div class="circle">
+        <img src="./img/user.png" alt="">
+        <span>Welcome!</span>
+      </div>
+    </div>
+
+
+    <a href="indexs.html">
+      <li><span class="la la-lg la-home">&nbsp;&nbsp;&nbsp;</span> Home</li>
+    </a>
+    <a href="admission.html">
+      <li><span class="la la-lg la-plus-circle">&nbsp;&nbsp;&nbsp;</span>Admission</li>
+    </a>
+    <a href="facility.html">
+      <li><span class="la la-lg la-futbol-o">&nbsp;&nbsp;&nbsp;</span>Facilities</li>
+    </a>
+    <a href="staffs.html">
+      <li><span class="la la-lg la-users">&nbsp;&nbsp;&nbsp;</span>Staffs</li>
+    </a>
+    <a href="contact.html">
+      <li><span class="la la-lg la-link">&nbsp;&nbsp;&nbsp;</span>Contact</li>
+    </a>
+    <a href="about.html">
+      <li><span class="la la-lg la-info">&nbsp;&nbsp;&nbsp;</span>About</li>
+    </a>
+    <a href="stulogin.html">
+      <li><span class="la la-lg la-user">&nbsp;&nbsp;&nbsp;</span>Student Login</li>
+    </a>
+
+  </aside>
+
+  <script>
+    var ua = navigator.userAgent.toLowerCase();
+    var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+    var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+
+    $('#drawerEl').drawer({
+        range: isMobileSafari ? [35, 150] : [0, 150],
+        threshold: isSafari ? 0 : 10,
+      })
+      .on('transitioned.hy.drawer', function(e) {
+        console.log('hy-drawer transitioned to', e.detail);
+      });
+
+    $('#menuEl').click(function(e) {
+      e.preventDefault();
+      $('#drawerEl').drawer('toggle');
+    });
+
+  </script>
+<!-- NOTE: Start of Slider Don't Modify 640x380-->
+<script src="./js/jssor.slider.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jssor_1_slider_init = function() {
+
+        var jssor_1_SlideshowTransitions = [
+          {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+          {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+        ];
+
+        var jssor_1_options = {
+          $AutoPlay: 1,
+          $SlideshowOptions: {
+            $Class: $JssorSlideshowRunner$,
+            $Transitions: jssor_1_SlideshowTransitions,
+            $TransitionsOrder: 1
+          },
+          $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$
+          },
+          $ThumbnailNavigatorOptions: {
+            $Class: $JssorThumbnailNavigator$,
+            $Orientation: 2,
+            $NoDrag: true
+          }
+        };
+
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+        /*#region responsive code begin*/
+
+        var MAX_WIDTH = 640;
+
+        function ScaleSlider() {
+            var containerElement = jssor_1_slider.$Elmt.parentNode;
+            var containerWidth = containerElement.clientWidth;
+
+            if (containerWidth) {
+
+                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                jssor_1_slider.$ScaleWidth(expectedWidth);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
+        }
+
+        ScaleSlider();
+
+        $Jssor$.$AddEvent(window, "load", ScaleSlider);
+        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+        /*#endregion responsive code end*/
+    };
+</script>
+<style>
+    /* jssor slider loading skin spin css */
+    .jssorl-009-spin img {
+        animation-name: jssorl-009-spin;
+        animation-duration: 1.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes jssorl-009-spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .jssora061 {display:none;position:absolute;cursor:pointer;}
+    .jssor_show {display:block;position:absolute;cursor:pointer;}
+    .jssora061 .a {fill:none;stroke:#fff;stroke-width:360;stroke-linecap:round;}
+    .jssora061:hover {opacity:.8;}
+    .jssora061.jssora061dn {opacity:.5;}
+    .jssora061.jssora061ds {opacity:.3;pointer-events:none;}
+</style>
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:640px;height:380px;overflow:hidden;visibility:hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+    </div>
+    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:640px;height:380px;overflow:hidden;">
+        <div>
+            <img data-u="image" src="./img/slide1.jpg" />
+            <div data-u="thumb">Welcome to Jawahar Navodaya Vidyalaya Siwan</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide2.jpg" />
+            <div data-u="thumb">Morning Assembly</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide3.jpg" />
+            <div data-u="thumb">On Republic Day</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide4.jpg" />
+            <div data-u="thumb">Guide Marching</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide5.jpg" />
+            <div data-u="thumb">Independence Day Celebration</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide6.jpg" />
+            <div data-u="thumb"> CCA Alpana Painting Competetion</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide7.jpg" />
+            <div data-u="thumb">Independence Day Parade</div>
+        </div>
+        <div>
+            <img data-u="image" src="./img/slide8.jpg" />
+            <div data-u="thumb">Scout Marching</div>
+        </div>
+
+
+    </div>
+    <!-- Thumbnail Navigator -->
+    <div data-u="thumbnavigator" style="position:absolute;bottom:0px;left:0px;width:640px;height:50px;color:#FFF;overflow:hidden;cursor:default;background-color:rgba(0,0,0,.5);">
+        <div data-u="slides">
+            <div data-u="prototype" style="position:absolute;top:0;left:0;width:640px;height:50px;">
+                <div data-u="thumbnailtemplate" style="position:absolute;top:0;left:0;width:100%;height:100%;font-family:verdana;font-weight:normal;line-height:50px;font-size:16px;padding-left:10px;box-sizing:border-box;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Arrow Navigator -->
+    <div data-u="arrowleft" class="jssora061" id="togjssor" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <path class="a" d="M11949,1919L5964.9,7771.7c-127.9,125.5-127.9,329.1,0,454.9L11949,14079"></path>
+        </svg>
+    </div>
+    <div data-u="arrowright" class="jssora061" id="togjssor" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <path class="a" d="M5869,1919l5984.1,5852.7c127.9,125.5,127.9,329.1,0,454.9L5869,14079"></path>
+        </svg>
+    </div>
+</div>
+<script type="text/javascript">jssor_1_slider_init();</script>
+
+  <div class="scroll-top-wrapper ">
+    <span class="scroll-top-inner">
+      <i class="la la-arrow-circle-o-up la-2x"></i>
+    </span>
+  </div>
+
+  <div class="container proxima">
+    <div class="text-xsb">
+      <b>OUR VIDYALAYA</b>
+    </div>
+    <div class="text-xs">The Navodaya Vidyalaya System is a unique experiment
+      unparalleled in the annals of school education in India and elsewhere.
+      Its significance lies in the selection of talented rural children as the
+      target group and the attempt to provide them with quality education
+      comparable to the best in a residential school system.
+      Such children are found in all sections of society,
+      and in all areas including the most backward.
+      Such education would enable students from rural areas to compete with their urban
+      counterparts on an equal footing. The National Policy on Education-1986 envisaged the
+      setting up of residential schools, to be called Jawahar Navodaya Vidyalayas that
+      would bring out the best of rural talent.</div>
+    <br><br>
+    <div class="text-xsb">
+      <b>ESTABLISHMENT</b></u><br>
+    </div>
+    <br><br>
+    <div class="text-xs">Jawahar Navodaya Vidyalaya, Siwan was established in the year 1991 under the National
+      Education Policy of the Central Government. Sri A.K. Shukla was the founder Principal
+      and Sri Shishir Kumar Sinha, D.M., Siwan was first chairman of the the Vidyalaya management Committee.
+      Since its inception in 1991 the Vidyalay is running in the premises of Women's Teacher
+      Training College of the State Government.</div>
+    <br><br>
+    <div class="text-xsb">
+      <b class="la-arrow-circle-o-down">VISION</b>
+    </div>
+    <br><br>
+    <div class="text-xs">
+      The National Policy on Education 1986 envisaged setting up of residential schools,
+      to be called Jawahar Navodaya Vidyalayas that would bring out the best rural talent.
+
+      <br>
+
+      It was felt that children with special talent or aptitude should be provided opportunities
+      to progress at a faster pace by making good quality education available to them irrespective
+      of their capacity to pay for it. Such education would enable students from rural areas to
+      compete with their urban counterparts on an equal footing.
+
+      <br><br>
+    </div>
+    <div class="text-xsb">
+      <b>OBJECTIVES</b>
+    </div>
+    <br><br>
+    <div class="text-xsb">
+
+      <b>Objectives of Navodaya Vidyalaya Samiti:</b>
+      <br>
+    </div>
+    To establish, endow, maintain, control and manage schools (hereinafter called the Navodaya Vidyalaya”) and to do all acts and things necessary for or conductive to the promotion of such schools which will have the following objectives:
+    <ul>
+
+      <li> To provide good quality modern education including a strong component of culture inculcation of values, awareness of the environment, adventure activities and physical education to the talented children predominantly from the rural areas
+        without regard to their family’s socio-economic conditionTo provide facilities, at a suitable stage, for instruction through a common medium, viz,. Hindi and English. All over the country. </li>
+      <li> Offer a common core-curriculum of ensuring comparability in standards and to facilitate and understanding of the common and composite heritage of our people.</li>
+      <li>
+        To progressively bring students from one part of the country to another in each school to promote national integration and enrich the social content.</li>
+      <li>
+        To serve as a focal point for improvement in quality of school education through training of teachers in live situation and sharing of experience and facilities.</li>
+      <li>
+        To establish, develop, maintain and manage Hostels for the residence of students of Navodaya Vidyalayas.</li>
+      <li>
+        To aid, establish and conduct other institutions as may be required for the furtherance of the Society’s objects in any part of India.
+      </li>
+      <li>
+        To do all such things as may be considered necessary, incidental or conductive to the attainment of all or any of the objects of the Society.
+      </li>
+    </ul>
+
+  </div>
+  <br><br>
+  <div class="text-xsb">
+
+    <img src="./img/rajiv.jpg" height="160" Width="140">
+    <font color="#4caf50"><br> Rajiv Gandhi</font>
+    <font color="#4caf50"><br>Founder of Navodaya Vidyalaya</font>
+    <br><br>
+  </div>
+  </div> <!-- End of the container-->
+  <div class="text-xsb proxima">
+    <div class="center"> &copy;All rights reserved|
+      <a href="index.html" class="nobut">JNV SIWAN</a>
+
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    function myNavi(x) {
+      x.classList.toggle("change");
+    }
+  </script>
+  <script type="text/javascript">
+    function myFunc() {
+      var sty = document.getElementById('yel');
+      var pqr = document.getElementById('numb');
+      var abc = document.getElementById('tnx');
+
+      sty.style.color = "orange";
+      pqr.innerHTML = "4.2 average based on 255 reviews";
+      pqr.style.fontWeight = 800;
+      tnx.style.display = "block";
+      tnx.stylr.fontWeight = "800";
+    }
+  </script>
+</body>
+
+</html>
